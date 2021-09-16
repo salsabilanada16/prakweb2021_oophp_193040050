@@ -10,7 +10,7 @@ class Produk
   public  $judul,
     $penulis,
     $penerbit,
-    ;
+    $harga;
 
   // Method ini akan otomatis dijalankan setiap menambahkan produk
   public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0)       // Pake __ karena construct merupakan bagian dari magic method atau method spesial yang dimiliki php
