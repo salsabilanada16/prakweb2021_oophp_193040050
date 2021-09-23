@@ -15,8 +15,14 @@ class Produk
     $waktuMain;
 
   // Method ini akan otomatis dijalankan setiap menambahkan produk
-  public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $jmlHalaman = 0, $waktuMain = 0)       // Pake __ karena construct merupakan bagian dari magic method atau method spesial yang dimiliki php
-  {
+  public function __construct(
+    $judul = "judul",
+    $penulis = "penulis",    // Pake __ karena construct merupakan bagian dari magic method atau method spesial yang dimiliki php
+    $penerbit = "penerbit",
+    $harga = 0,
+    $jmlHalaman = 0,
+    $waktuMain = 0
+  ) {
     $this->judul = $judul;
     $this->penulis = $penulis;
     $this->penerbit = $penerbit;
@@ -45,7 +51,8 @@ class Komik extends Produk
 {
   public function getInfoProduk()
   {
-    $str = "Komik : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->jmlHalaman} Halaman.";
+    $str = "Komik : {$this->judul} | {$this->getLabel()} 
+    (Rp. {$this->harga}) - {$this->jmlHalaman} Halaman.";
 
     return $str;
   }
@@ -56,7 +63,8 @@ class Game extends Produk
 {
   public function getInfoProduk()
   {
-    $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktuMain} Jam.";
+    $str = "Game : {$this->judul} | {$this->getLabel()} 
+    (Rp. {$this->harga}) ~ {$this->waktuMain} Jam.";
 
     return $str;
   }
