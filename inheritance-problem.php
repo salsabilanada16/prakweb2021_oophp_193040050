@@ -27,10 +27,12 @@ class Produk
     $this->tipe = $tipe;
   }
 
+
   public function getLabel()
   {
     return "$this->penulis, $this->penerbit";     // Fungsi $this untuk mengambil isi dari property yang ada dalam class yang bersangkutan ketika dibuat instancenya
   }
+
 
   public function getInfoLengkap()
   {
@@ -44,6 +46,7 @@ class Produk
     return $str;
   }
 }
+
 
 class CetakInfoProduk
 {
